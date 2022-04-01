@@ -20,29 +20,41 @@ Install and run mongodb on port 27017
 
 With homebrew:
 
+```
 brew tap mongodb/brew
 brew install mongodb-community@5.0
 brew services start mongodb-community@5.0 (defaults to port 27017)
+```
 
 Now start the server with
 
+```
 npm start
+```
 
 # routes
 
+```
 POST /node/:parentNodeID - create new node
 body: {
-employeeName,
-employeeType,
-managingDepartment,
-strongestLanguage
+    employeeName,
+    employeeType,
+    managingDepartment,
+    strongestLanguage
 }
+```
 
+```
 GET /node/:nodeID/children - get all children of node
+```
 
+```
 PUT /node/:nodeID/parent - set new parent of node
 body: {
-parentNodeID
+    parentNodeID
 }
+```
 
+```
 GET /nodes - get all nodes as a list
+```
